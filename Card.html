@@ -1,0 +1,95 @@
+<html>
+	<head><title> Details </title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="form-title" > Personal Details </div>
+		<label> Card Number<input type = "text" class="form-control" id = "no" size = 20> </label>
+			<br/><br/>
+		<label> Name of Family Head <input type = "text" class="form-control" id = "head" size = 20> </label>
+			<br/><br/>
+		<label> Age <input type = "text" class="form-control" id = "age" size = 20> </label>
+			<br/><br/>
+		<label> Mobile <input type = "text" class="form-control" id = "mob" size = 20> </label>
+			<br/><br/>
+		<label> Email <input type = "email" class="form-control" id = "email" size = 20> </label>
+			<br/><br/>
+		<label> Address <input type = "text" class="form-control" id = "add" size = 20> </label>
+			<br/><br/>
+		<label> Taluk <input type = "text" class="form-control" id = "taluk" size = 20> </label>
+			<br/><br/>
+		
+		<table class="col-md-12 table-bordered cf" style="padding-left:0px;padding-right:0px;">
+		<thead class="cf">
+			<tr>
+				<th style="font-size:14px;font-weight:500;">Name of Applicant and other family members </th>
+				<th style="font-size:14px;font-weight:500;">Relation with</th>
+				<th style="font-size:14px;font-weight:500;">Age</th>							
+				<th style="font-size:14px;font-weight:500;">Occupation and annual income</th>							
+				<th style="font-size:14px;font-weight:500;">Aadhar Card No</th>							
+				<th style="font-size:14px;font-weight:500;">Bank Account No</th>							
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td data-title="Name of Applicant"><input type="text" name="person1" id="person1" style="width:100%;" /></td>
+				<td data-title="Relation"><input type="text" name="relation1" id="relation1" style="width:100%;" /></td>
+				<td data-title="Age"><input type="text" name="age1" id="age1" style="width:100%;" /></td>
+				<td data-title="Occupation"><input type="text" name="occupation1" id="occupation1" style="width:100%;" /></td>							
+				<td data-title="Aadhar No"><input type="text" name="aadhar1" id="aadhar1" style="width:100%;" /></td>							
+				<td data-title="Bank Acc. No"><input type="text" name="bank1" id="bank1" style="width:100%;" /></td>							
+				</tr>
+			<tr>
+				<td data-title="Name of family member"><input type="text" name="person2" id="person2" style="width:100%;" /></td>
+				<td data-title="Relation"><input type="text" name="relation2" id="relation2" style="width:100%;" /></td>
+				<td data-title="Age"><input type="text" name="age2" id="age2" style="width:100%;" /></td>							
+				<td data-title="Occupation"><input type="text" name="occupation2" id="occupation2" style="width:100%;" /></td>							
+				<td data-title="Aadhar No"><input type="text" name="aadhar2" id="aadhar2" style="width:100%;"/></td>							
+				<td data-title="Bank Acc. No"><input type="text" name="bank2" id="bank2" style="width:100%;" /></td>									
+			</tr>
+			<tr>
+				<td data-title="Name of family member"><input type="text" name="person3" id="person3" style="width:100%;" /></td>
+				<td data-title="Relation"><input type="text" name="relation3" id="relation3" style="width:100%;" /></td>
+				<td data-title="Age"><input type="text" name="age3" id="age3" style="width:100%;" class="form-control1"/></td>
+				<td data-title="Occupation"><input type="text" name="occupation3" id="occupation3" style="width:100%;" /></td>							
+				<td data-title="Aadhar No"><input type="text" name="aadhar3" id="aadhar3" style="width:100%;" class=/></td>							
+				<td data-title="Bank Acc. No"><input type="text" name="bank3" id="bank3" style="width:100%;" class=/></td>										
+			</tr>
+			<tr>
+				<td data-title="Name of family member"><input type="text" name="person4" id="person4" style="width:100%;" /></td>
+				<td data-title="Relation"><input type="text" name="relation4" id="relation4" style="width:100%;" /></td>
+				<td data-title="Age"><input type="text" name="age4" id="age4" style="width:100%;" /></td>
+				<td data-title="Occupation"><input type="text" name="occupation4" id="occupation4" style="width:100%;" /></td>							
+				<td data-title="Aadhar No"><input type="text" name="aadhar4" id="aadhar4" style="width:100%;" /></td>							
+				<td data-title="Bank Acc. No"><input type="text" name="bank4" id="bank4" style="width:100%;" /></td>						
+			</tr>
+			<tr>
+				<td data-title="Name of family member"><input type="text" name="person5" id="person5" style="width:100%;" /></td>
+				<td data-title="Relation"><input type="text" name="relation5" id="relation5" style="width:100%;" /></td>
+				<td data-title="Age"><input type="text" name="age5" id="age5" style="width:100%;" /></td>
+				<td data-title="Occupation"><input type="text" name="occupation5" id="occupation5" style="width:100%;" /></td>							
+				<td data-title="Aadhar No"><input type="text" name="aadhar5" id="aadhar5" style="width:100%;" /></td>							
+				<td data-title="Bank Acc. No"><input type="text" name="bank5" id="bank5" style="width:100%;" /></td>											
+			</tr>
+		</tbody>
+		</table>
+		<button id="submitBtn" onclick="submitClick()"></button>
+		
+		<script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+		<script>
+			// Initialize Firebase
+			var config = {
+			apiKey: "AIzaSyD1dauD5yzAVYF2ziOZAk_Gm4jnrDLwvOY",
+			authDomain: "first-1200b.firebaseapp.com",
+			databaseURL: "https://first-1200b.firebaseio.com",
+			projectId: "first-1200b",
+			storageBucket: "first-1200b.appspot.com",
+			messagingSenderId: "372768963704"
+			};
+			firebase.initializeApp(config);
+		</script>
+		<script src="Card.js"></script>
+	</body>
+</html>
+	
+	

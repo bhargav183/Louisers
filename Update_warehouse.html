@@ -1,0 +1,36 @@
+<html>
+	<head> <title>Update Warehouse </title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	</head>
+	<body>
+		<p> Enter All Quantities in tonnes </p>
+		<label> Warehouse Division <input type = "text" class="form-control" id = "w" size = 20> </label>
+			<br/><br/><br/>
+		<label> Rice <input type = "text" class="form-control" id = "rice" size = 20> </label>
+			<br/><br/><br/>
+		<label> Wheat <input type = "text" class="form-control" id = "wheat" size = 20> </label>
+			<br/><br/><br/>
+		<label> Ragi <input type = "text" class="form-control" id = "ragi" size = 20> </label>
+			<br/><br/><br/>
+		<label> Sugar <input type = "text" class="form-control" id = "sugar" size = 20> </label>
+			<br/><br/><br/>
+		<label> Salt <input type = "text" class="form-control" id = "salt" size = 20> </label>
+			<br/><br/><br/>
+		<button id="submitBtn" onclick="submitClick()"></button>
+
+	<script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+		apiKey: "AIzaSyD1dauD5yzAVYF2ziOZAk_Gm4jnrDLwvOY",
+		authDomain: "first-1200b.firebaseapp.com",
+		databaseURL: "https://first-1200b.firebaseio.com",
+		projectId: "first-1200b",
+		storageBucket: "first-1200b.appspot.com",
+		messagingSenderId: "372768963704"
+		};
+		firebase.initializeApp(config);
+	</script>
+	<script src="Update_warehouse.js"></script>
+	</body>
+</html>
