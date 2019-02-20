@@ -10,11 +10,11 @@ function submitClick()
 	var wh=warehouse.value;
 	var firebaseRef = firebase.database().ref("Warehouse/");
 	
-	var q_of_rice=rice.value;
-	var q_of_wheat=wheat.value;
-	var q_of_ragi=ragi.value;
-	var q_of_salt=salt.value;
-	var q_of_sugar=sugar.value;
+	var q_of_rice=Number(rice.value);
+	var q_of_wheat=Number(wheat.value);
+	var q_of_ragi=Number(ragi.value);
+	var q_of_salt=Number(salt.value);
+	var q_of_sugar=Number(sugar.value);
 	
 	firebaseRef.child(wh).set({
 		"rice_quantity":q_of_rice,
@@ -23,6 +23,6 @@ function submitClick()
 		"salt_quantity":q_of_salt,
 		"sugar_quantity":q_of_sugar
 	});
-	alert("Sup");
+	alert("Successful");
 
 }

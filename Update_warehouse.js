@@ -8,14 +8,20 @@ var sugar = document.getElementById("sugar");
 function submitClick()
 {
 	var wh=warehouse.value;
-	var firebaseRef = firebase.database().ref("Warehouse/");
+	firebaseRef = firebase.database().ref("Warehouse/");
+	var r = Number(firebase.database().ref("Warehouse/" + wh+"/rice_quantity").val);
+	var r2 = Number(firebase.database().ref("Warehouse/" + wh+"/ragi_quantity").val);
+	var w = Number(firebase.database().ref("Warehouse/" + wh+"/wheat_quantity").val);
+	var s =  Number(firebase.database().ref("Warehouse/" + wh+"/sugar_quantity").val);
+	var s2 = Number(firebase.database().ref("Warehouse/" + wh+"/salt_quantity").val);
 	
-	var q_of_rice=rice.value;
-	var q_of_wheat=wheat.value;
-	var q_of_ragi=ragi.value;
-	var q_of_salt=salt.value;
-	var q_of_sugar=sugar.value;
-	
+	var q_of_rice=Number(rice.value) + r;
+	var q_of_wheat=Number(wheat.value) + w;
+	var q_of_ragi=Number(ragi.value) + r2;
+	var q_of_salt=Number(salt.value) + s2;
+	var q_of_sugar=Number(sugar.value) + s;
+	console.log(typeof q_of_rice);
+	console.log(typeof r);
 	firebaseRef.child(wh).update({
 		"rice_quantity":q_of_rice,
 		"wheat_quantity":q_of_wheat,
