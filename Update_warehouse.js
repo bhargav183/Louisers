@@ -8,27 +8,43 @@ var sugar = document.getElementById("sugar");
 function submitClick()
 {
 	var wh=warehouse.value;
-	firebaseRef = firebase.database().ref("Warehouse/");
-	var r = Number(firebase.database().ref("Warehouse/" + wh+"/rice_quantity").val);
-	var r2 = Number(firebase.database().ref("Warehouse/" + wh+"/ragi_quantity").val);
-	var w = Number(firebase.database().ref("Warehouse/" + wh+"/wheat_quantity").val);
-	var s =  Number(firebase.database().ref("Warehouse/" + wh+"/sugar_quantity").val);
-	var s2 = Number(firebase.database().ref("Warehouse/" + wh+"/salt_quantity").val);
-	
-	var q_of_rice=Number(rice.value) + r;
-	var q_of_wheat=Number(wheat.value) + w;
-	var q_of_ragi=Number(ragi.value) + r2;
-	var q_of_salt=Number(salt.value) + s2;
-	var q_of_sugar=Number(sugar.value) + s;
-	console.log(typeof q_of_rice);
-	console.log(typeof r);
-	firebaseRef.child(wh).update({
+	var rc,we,rg,sl,su;
+	firebaseRef = firebase.database().ref("Warehouse/"+wh);
+	firebaseRef.once("value", function(snapshot) {
+		rc = snapshot.child("rice_quantity").val();
+		rg = snapshot.child("ragi_quantity").val();
+		we = snapshot.child("wheat_quantity").val();
+		sl = snapshot.child("salt_quantity").val();
+		su = snapshot.child("sugar_quantity").val();
+		var add_rice = parseInt(rice.value)+parseInt(rc);
+		var add_wheat = parseInt(wheat.value)+parseInt(we);
+		var add_ragi = parseInt(ragi.value)+parseInt(rg);
+		var add_salt = parseInt(salt.value)+parseInt(sl);
+		var add_sugar = parseInt(sugar.value)+parseInt(su);
+		console.log(add_rice);
+		firebaseRef.set({
+		"rice_quantity":add_rice,
+		"wheat_quantity":add_ragi,
+		"ragi_quantity":add_wheat,
+		"salt_quantity":add_salt,
+		"sugar_quantity":add_sugar
+		
+	});
+		
+	}, function (error) {
+   console.log("Error: " + error.code);
+});
+	//console.log(rc);
+	/*firebaseRef.child(wh).update({
 		"rice_quantity":q_of_rice,
 		"wheat_quantity":q_of_wheat,
 		"ragi_quantity":q_of_ragi,
 		"salt_quantity":q_of_salt,
 		"sugar_quantity":q_of_sugar
-	});
+		
+	});*/
+	//console.log(rc);
+	
 	alert("Sup");
 
 }
