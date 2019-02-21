@@ -1,0 +1,29 @@
+<html>
+	<head> <title> Warehouse </title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	</head>
+	<body>
+		<p> Enter All Quantities in tonnes </p>
+		<label> Ward <input type = "text" class="form-control" id = "ward" size = 20> </label>
+			<br/><br/><br/>
+		<label> Item <input type = "numeric" class="form-control" id = "item" size = 20> </label>
+			<br/><br/><br/>
+			
+		<button id="submitBtn" onclick="submitClick()"></button> 
+			
+<script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+		apiKey: "AIzaSyD1dauD5yzAVYF2ziOZAk_Gm4jnrDLwvOY",
+		authDomain: "first-1200b.firebaseapp.com",
+		databaseURL: "https://first-1200b.firebaseio.com",
+		projectId: "first-1200b",
+		storageBucket: "first-1200b.appspot.com",
+		messagingSenderId: "372768963704"
+		};
+		firebase.initializeApp(config);
+	</script>
+	<script src="stock.js"></script>
+	</body>
+</html>
