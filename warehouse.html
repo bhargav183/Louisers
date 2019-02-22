@@ -1,5 +1,9 @@
 <html>
 	<head> <title> Warehouse </title>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<style>
+		.w3-button {width:150px;}
+	</style>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	</head>
 	<body>
@@ -16,7 +20,7 @@
 			<br/><br/><br/>
 		<label> Salt <input type = "numeric" class="form-control" id = "salt" size = 20> </label>
 			<br/><br/><br/>
-		<button id="submitBtn" onclick="submitClick()"></button>
+		<button class="w3-button w3-blue" id="submitBtn" onclick="submitClick()">Submit</button>
 
 	<script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
 	<script>
