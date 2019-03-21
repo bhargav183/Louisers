@@ -16,6 +16,7 @@
   <!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
   <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
   <script src="https://www.gstatic.comfirebase/init.js"></script>
   <script>
 		// Initialize Firebase
@@ -79,6 +80,7 @@
     function handleSignUp() {
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
+	  
       if (email.length < 4) {
         alert('Please enter an email address.');
         return;
@@ -102,6 +104,7 @@
         console.log(error);
         // [END_EXCLUDE]
       });
+	  
       // [END createwithemail]
     }
     /**
@@ -162,6 +165,18 @@
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
           var providerData = user.providerData;
+		  var division = document.getElementById('division').value;
+		  var firebaseRef = firebase.database().ref("Admin");
+			firebaseRef.once("value", function(snapshot) {
+			firebaseRef.child(uid).set({
+				"Email": email,
+				"Name": displayName,
+				"Provider Data": providerData,
+				"Division": division
+			});
+			}, function (error) {
+				console.log("Error: " + error.code);
+			});
           // [START_EXCLUDE]
           document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
           document.getElementById('quickstart-sign-in').textContent = 'Sign out';

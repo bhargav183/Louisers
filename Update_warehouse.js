@@ -45,6 +45,6 @@ function submitClick()
 	});*/
 	//console.log(rc);
 	
-	alert("Sup");
+	alert("Successfully Updated");
 
 }
