@@ -26,7 +26,7 @@
 		// Initialize Firebase
 		var config = {
 		apiKey: "AIzaSyD1dauD5yzAVYF2ziOZAk_Gm4jnrDLwvOY",
-		authDomain: "first-1200b.firebaseapp.com",
+		authDomain: "first-1200b.firebaseapp.com",											
 		databaseURL: "https://first-1200b.firebaseio.com",
 		projectId: "first-1200b",
 		storageBucket: "first-1200b.appspot.com",
@@ -48,6 +48,19 @@
       } else {
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
+		var ward = document.getElementById('ward').value;
+		var fmail = email.replace(".","_");
+		console.log(fmail);
+		var ver;
+		var firebaseRef = firebase.database().ref("Admin/"+fmail);
+		firebaseRef.once("value", function(snapshot) {
+			ver = snapshot.child("Warehouse").val();
+			console.log(ver);
+			if(ward!=ver){
+				console.log("Invalid Credentials");
+				return;
+			}
+		})	
         if (email.length < 4) {
           alert('Please enter an email address.');
           return;
@@ -59,6 +72,7 @@
         // Sign in with email and pass.
         // [START authwithemail]
         firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
+			
 			window.location = "index.html";
 		}).catch(function(error) {
           // Handle Errors here.
@@ -166,12 +180,15 @@
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Login</h1>
               </div>
-              <form class="user">
+              <form class="user" method="get">
                 <div class="form-group ">
                     <input type="text" class="form-control form-control-user" id="email" placeholder="Email">
 				</div>
                   <div class="form-group">
                     <input type="password" class="form-control form-control-user" id="password" placeholder="password">
+                  </div>
+				  <div class="form-group">
+                    <input type="text" class="form-control form-control-user" id="ward" placeholder="Ward">
                   </div>
 			</form>
 			<div class="col-md-4 text-center"> 
