@@ -1,108 +1,86 @@
 <html>
 	<head>
-	<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="">
-		<meta name="author" content="">
 		
-	<title> Details </title>
-	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+		<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+		<title class = "fas fa-user-shield">Card Entry</title>	
+		<!-- Custom fonts for this template-->
+		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-		<link href="css/sb-admin-2.min.css" rel="stylesheet">
-		</head>
-	<body class="bg-gradient-primary">
-		<div class="container">
 
-    <div class="card o-hidden border-0 shadow-lg my-5">
-      <div class="card-body p-0">
-        <!-- Nested Row within Card Body -->
-        <div class="row">
-          <!--div class="col-lg-5 d-none d-lg-block bg-register-image"></div-->
-          <div class="col-lg-7">
-            <div class="p-5">
-              <div class="text-center">
-                <h1 class="h4 text-gray-900 mb-4">Enter All Details</h1>
-              </div>
-		<form class="user" onsubmit = "index.html">
-		<div class="form-title" > Personal Details </div>
-		<div class="form-group row">
+		<!-- Custom styles for this template-->
+		<link href="css/sb-admin-2.min.css" rel="stylesheet">
+	
+	</head>
+	
+	
+	<body "bg-gradient-primary">	
+				
+			<div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+      <div class="col-xl-10 col-lg-12 col-md-9">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Enter Beneficiary Details!</h1>
+                  </div>	
+			<div class="form-group">
+
                 <input type="text" class="form-control form-control-user" id="no" placeholder="Card Number">
-        </div> 
-		<div class="form-group row">
-                <input type="text" class="form-control form-control-user" id="head" placeholder="Name of Family Head">
-        </div> 
-		<div class="form-group row">
-                <input type="text" class="form-control form-control-user" id="age" placeholder="Age">
-        </div> 
-		<div class="form-group row">
-                <input type="text" class="form-control form-control-user" id="mob" placeholder="Mobile">
-        </div> 
-		<div class="form-group row">
-                <input type="text" class="form-control form-control-user" id="email" placeholder="Email">
-        </div> 
-		<div class="form-group row">
-                <input type="text" class="form-control form-control-user" id="add" placeholder="Address">
-        </div> 
-		<div class="form-group row">
-                <input type="text" class="form-control form-control-user" id="taluk" placeholder="Taluk">
-        </div> 
+
+			</div>
 		
-		<table class="col-md-12 table-bordered cf" style="padding-left:0px;padding-right:0px;">
-		<thead class="cf">
-			<tr>
-				<th style="font-size:14px;font-weight:500;">Name of Applicant and other family members </th>
-				<th style="font-size:14px;font-weight:500;">Relation with</th>
-				<th style="font-size:14px;font-weight:500;">Age</th>							
-				<th style="font-size:14px;font-weight:500;">Occupation and annual income</th>							
-				<th style="font-size:14px;font-weight:500;">Aadhar Card No</th>							
-				<th style="font-size:14px;font-weight:500;">Bank Account No</th>							
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td data-title="Name of Applicant"><input type="text" name="person1" id="person1" style="width:100%;" /></td>
-				<td data-title="Relation"><input type="text" name="relation1" id="relation1" style="width:100%;" /></td>
-				<td data-title="Age"><input type="text" name="age1" id="age1" style="width:100%;" /></td>
-				<td data-title="Occupation"><input type="text" name="occupation1" id="occupation1" style="width:100%;" /></td>							
-				<td data-title="Aadhar No"><input type="text" name="aadhar1" id="aadhar1" style="width:100%;" /></td>							
-				<td data-title="Bank Acc. No"><input type="text" name="bank1" id="bank1" style="width:100%;" /></td>							
-				</tr>
-			<tr>
-				<td data-title="Name of family member"><input type="text" name="person2" id="person2" style="width:100%;" /></td>
-				<td data-title="Relation"><input type="text" name="relation2" id="relation2" style="width:100%;" /></td>
-				<td data-title="Age"><input type="text" name="age2" id="age2" style="width:100%;" /></td>							
-				<td data-title="Occupation"><input type="text" name="occupation2" id="occupation2" style="width:100%;" /></td>							
-				<td data-title="Aadhar No"><input type="text" name="aadhar2" id="aadhar2" style="width:100%;"/></td>							
-				<td data-title="Bank Acc. No"><input type="text" name="bank2" id="bank2" style="width:100%;" /></td>									
-			</tr>
-			<tr>
-				<td data-title="Name of family member"><input type="text" name="person3" id="person3" style="width:100%;" /></td>
-				<td data-title="Relation"><input type="text" name="relation3" id="relation3" style="width:100%;" /></td>
-				<td data-title="Age"><input type="text" name="age3" id="age3" style="width:100%;" class="form-control1"/></td>
-				<td data-title="Occupation"><input type="text" name="occupation3" id="occupation3" style="width:100%;" /></td>							
-				<td data-title="Aadhar No"><input type="text" name="aadhar3" id="aadhar3" style="width:100%;" class=/></td>							
-				<td data-title="Bank Acc. No"><input type="text" name="bank3" id="bank3" style="width:100%;" class=/></td>										
-			</tr>
-			<tr>
-				<td data-title="Name of family member"><input type="text" name="person4" id="person4" style="width:100%;" /></td>
-				<td data-title="Relation"><input type="text" name="relation4" id="relation4" style="width:100%;" /></td>
-				<td data-title="Age"><input type="text" name="age4" id="age4" style="width:100%;" /></td>
-				<td data-title="Occupation"><input type="text" name="occupation4" id="occupation4" style="width:100%;" /></td>							
-				<td data-title="Aadhar No"><input type="text" name="aadhar4" id="aadhar4" style="width:100%;" /></td>							
-				<td data-title="Bank Acc. No"><input type="text" name="bank4" id="bank4" style="width:100%;" /></td>						
-			</tr>
-			<tr>
-				<td data-title="Name of family member"><input type="text" name="person5" id="person5" style="width:100%;" /></td>
-				<td data-title="Relation"><input type="text" name="relation5" id="relation5" style="width:100%;" /></td>
-				<td data-title="Age"><input type="text" name="age5" id="age5" style="width:100%;" /></td>
-				<td data-title="Occupation"><input type="text" name="occupation5" id="occupation5" style="width:100%;" /></td>							
-				<td data-title="Aadhar No"><input type="text" name="aadhar5" id="aadhar5" style="width:100%;" /></td>							
-				<td data-title="Bank Acc. No"><input type="text" name="bank5" id="bank5" style="width:100%;" /></td>											
-			</tr>
-		</tbody>
-		</table>
+			<div class="form-group">
+                <input type="text" class="form-control form-control-user" id="head" placeholder="Name of Family Head">
+			</div>
+         
+			<div class="form-group">
+                <input type="text" class="form-control form-control-user" id="cat" placeholder="Category">
+        
+			</div>
+			<div class="form-group">
+                <input type="text" class="form-control form-control-user" id="add" placeholder="Address">
+         	</div>
+			<div class="form-group">
+                <input type="text" class="form-control form-control-user" id="taluk" placeholder="Taluk">
+			</div>	
+			<div class="form-group">	
+				<input type="text" class="form-control form-control-user" id="aadhar1" placeholder="Enter Aadhar number">
+			</div>
+			<div class="form-group">	
+				<input type="text" class="form-control form-control-user" id="aadhar2" placeholder="Enter Aadhar Number">
+			</div>	
+			<div class="form-group">	
+				<input type="text" class="form-control form-control-user" id="aadhar3" placeholder="Enter Aadhar Number">
+			</div>	
+			<div class="form-group">	
+				<input type="text" class="form-control form-control-user" id="aadhar4" placeholder="Enter Aadhar Number">
+			</div>
+		
 		<button class="w3-button w3-blue" id="submitBtn" onclick="submitClick()">Submit</button>
+		
+		<!-- Bootstrap core JavaScript-->
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Core plugin JavaScript-->
+		<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+		<!-- Custom scripts for all pages-->
+		<script src="js/sb-admin-2.min.js"></script>
+
 		
 		<script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
 		<script>
@@ -117,8 +95,6 @@
 			};
 			firebase.initializeApp(config);
 		</script>
-		<script src="Card.js"></script>
+		<script src="card.js"></script>
 	</body>
 </html>
-	
-	
